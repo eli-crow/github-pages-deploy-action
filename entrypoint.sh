@@ -82,6 +82,11 @@ if [ "$CNAME" ]; then
   echo $CNAME > $FOLDER/CNAME
 fi
 
+if [ "$NOJEKYLL" ]; then
+  echo "Generating a CNAME file in in the $FOLDER directory..."
+  touch $FOLDER/.nojekyll
+fi
+
 # Commits the data to Github.
 echo "Deploying to GitHub..." && \
 git add -f $FOLDER && \
