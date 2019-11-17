@@ -83,7 +83,7 @@ if [ "$CNAME" ]; then
 fi
 
 if [ "$NOJEKYLL" ]; then
-  echo "Generating a CNAME file in in the $FOLDER directory..."
+  echo "Creating the .nojekyll file in $FOLDER directory..."
   touch $FOLDER/.nojekyll
 fi
 
